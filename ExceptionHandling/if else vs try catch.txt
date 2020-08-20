@@ -1,0 +1,21 @@
+1. we should only use try catch in the case that when we are not in control or cannot check things beforehand.
+
+2. Use try/catch when we work with files, because the state of a file can change outside of the program.
+	For example:
+		if(File.Exists("file.txt")) {
+			//
+			//
+			File.Delete("file.txt");
+		}
+    
+3. The file might have been deleted by another process right after the if statement, before the Delete() call. 
+   When we try to delete it, an exception will be raised.
+
+4. When working with files there are also a lot more things to consider, that we might not be able to catch with ifs, 
+   for example the file is on a network connection that got unavailable, access rights that change, hard disk failure etc.
+
+5. These things are outside the control of our program, so we should have exception handlers in place.
+
+6. For if-else, consider an example that we have division by zero possibility.
+   Here we are in control, we can check before we divide, and act upon.
+   If it's zero, we just don't need to do the division, but instead execute another logic.
