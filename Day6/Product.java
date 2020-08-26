@@ -1,6 +1,6 @@
 package Day6;
 
-public class Product  {
+public class Product implements Comparable<Product> {
 	private int pid;
 	private String productName;
 	private int cost;
@@ -90,6 +90,14 @@ public class Product  {
 		return "Product [pid=" + pid + ", productName=" + productName + ", cost=" + cost + ", starRating=" + starRating
 				+ "]";
 	}
+
+	@Override
+	public int compareTo(Product o) {
+		// TODO Auto-generated method stub
+		return this.pid - o.pid;
+	}
+
+	
 	
 
 }

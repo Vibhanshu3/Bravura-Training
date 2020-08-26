@@ -17,7 +17,7 @@ public class TreeSetDemo {
 		set.add(new Product(2, "bed", 1000, 5));
 
 		
-//		System.out.println(set.toString());
+		System.out.println(set.toString());
 
 	}
 
