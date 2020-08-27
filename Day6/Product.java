@@ -1,6 +1,6 @@
 package Day6;
 
-public class Product implements Comparable<Product> {
+public class Product  implements Comparable<Product> {
 	private int pid;
 	private String productName;
 	private int cost;

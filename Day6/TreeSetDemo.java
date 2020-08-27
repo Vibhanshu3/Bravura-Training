@@ -1,5 +1,9 @@
 package Day6;
 
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.List;
 import java.util.Set;
 import java.util.TreeSet;
 
@@ -16,9 +20,20 @@ public class TreeSetDemo {
 		set.add(new Product(4, "toy", 50, 2));
 		set.add(new Product(2, "bed", 1000, 5));
 
-		
-		System.out.println(set.toString());
+		List<Product> list = new ArrayList<>();
+		list.addAll(set);
+		Collections.sort(list, new ProductSortOnStarRating());
+		System.out.println(list);
+//		displayProducts(set);
 
+	}
+	
+	public static void displayProducts(Collection<Product> products)
+	{
+		for (Product p : products) {
+			System.out.println("\n"+p);
+		}
+		
 	}
 
 }
