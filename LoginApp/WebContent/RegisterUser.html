@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script>
+	function validateform() {
+		var username = document.myform.username.value;
+		var password = document.myform.password.value;
+		var confirm_password = document.myform.confirm_password.value;
+
+		if (password != confirm_password) {
+			alert("Password or confirm password doesnt match");
+			return false;
+		}
+	}
+</script>
+
+</head>
+<body>
+	<form name="myform" action="RegisterUserServlet" method="post" onsubmit=" return validateform()">
+		<label for="username">User name</label>
+		 <input type="text" name="username" required>
+		  <label for="psw">Password</label>
+		   <input type="password" name="password" required>
+		    <label for="psw">Confirm Password</label> 
+		    <input type="password" name="confirm_password" required>
+
+		<input type="submit" value="Submit">
+	</form>
+</body>
+</html>
